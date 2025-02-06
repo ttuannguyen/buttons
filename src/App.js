@@ -6,7 +6,7 @@ function App() {
     <>
       <div>
         <div>
-          <Button success rounded outline>Click me!!</Button>
+          <Button success primary rounded outline>Click me!!</Button>
         </div>
         <div>
           <Button danger outline>Buy now!!</Button>

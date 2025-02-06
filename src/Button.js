@@ -24,7 +24,7 @@ Button.propTypes = {
         + Number(!!secondary)
         + Number(!!success)
         + Number(!!warning)
-        + Number(!!danger)
+        + Number(!!danger);
 
     if (count > 1) {
         return new Error('Only one of primary, secondary, success, warning, danger can be true');
