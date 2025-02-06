@@ -15,7 +15,7 @@ const Button = ({
   //     throw new Error('only one should be provided');
   //   }
 
-  return <button>{children}</button>;
+  return <button className="bg-red-500">{children}</button>;
 };
 
 Button.propTypes = {
