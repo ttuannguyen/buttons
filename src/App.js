@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GoBell, GoChecklist, GoBug, GoBroadcast  } from "react-icons/go";
+import { GoBell, GoChecklist, GoBroadcast  } from "react-icons/go";
 import Button from "./Button";
 
 function App() {
@@ -19,7 +19,6 @@ function App() {
           </Button>
         </div>
         <div>
-          <GoBug />
           <Button warning>See deal!!</Button>
         </div>
         <div>
