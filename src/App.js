@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { GoBell, GoChecklist, GoBroadcast  } from "react-icons/go";
+import { GoBell, GoChecklist, GoBroadcast } from "react-icons/go";
 import Button from "./Button";
 
 function App() {
-
   const handleClick = () => {
     console.log("click!");
   };
@@ -12,7 +11,13 @@ function App() {
     <>
       <div>
         <div>
-          <Button success rounded outline onClick={handleClick}>
+          <Button
+            success
+            rounded
+            outline
+            className="mb-5"
+            onClick={handleClick}
+          >
             <GoBell />
             Click me!!
           </Button>
