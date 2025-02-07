@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import className from "classnames";
 
 const Button = ({
   children,
@@ -15,8 +16,17 @@ const Button = ({
   //     throw new Error('only one should be provided');
   //   }
 
-  return <button className="px-3 py-1.5 border border-blue-700 bg-blue-500 text-white">{children}</button>;
+  let baseClassName = 'px-3 py-1.5 border';
+  if (primary) {
+    baseClassName += 'border-blue-700 bg-blue-500 text-white';
+  } else if (secondary) {
+
+  }
+
+  return <button className=''>{children}</button>;
 };
+
+
 
 Button.propTypes = {
   checkVariationValue: ({ primary, secondary, success, warning, danger }) => {
