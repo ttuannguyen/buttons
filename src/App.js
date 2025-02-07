@@ -3,11 +3,16 @@ import { GoBell, GoChecklist, GoBroadcast  } from "react-icons/go";
 import Button from "./Button";
 
 function App() {
+
+  const handleClick = () => {
+    console.log("click!");
+  };
+
   return (
     <>
       <div>
         <div>
-          <Button success rounded outline>
+          <Button success rounded outline onClick={handleClick}>
             <GoBell />
             Click me!!
           </Button>

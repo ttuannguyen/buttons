@@ -12,6 +12,7 @@ const Button = ({
   danger,
   outline,
   rounded,
+  onClick
 }) => {
 
   const classes = twMerge(
@@ -31,7 +32,7 @@ const Button = ({
     })
   );
 
-  return <button className={classes}>{children}</button>;
+  return <button onClick={onClick} className={classes}>{children}</button>;
 };
 
 
