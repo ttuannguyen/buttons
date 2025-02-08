@@ -1,50 +1,12 @@
 import { useState } from "react";
 import { GoBell, GoChecklist, GoBroadcast } from "react-icons/go";
-import Button from "./Button";
+import Button from "./components/Button";
+import Accordion from "./components/Accordion";
 
 function App() {
-  const handleClick = () => {
-    console.log("click!");
-  };
 
-  return (
-    <>
-      <div>
-        <div>
-          <Button
-            success
-            rounded
-            outline
-            className="mb-5"
-            onClick={handleClick}
-          >
-            <GoBell />
-            Click me!!
-          </Button>
-        </div>
-        <div>
-          <Button danger outline>
-            <GoChecklist />
-            Buy now!!
-          </Button>
-        </div>
-        <div>
-          <Button warning>See deal!!</Button>
-        </div>
-        <div>
-          <Button secondary outline>
-            <GoBroadcast />
-            Hide ad!!
-          </Button>
-        </div>
-        <div>
-          <Button primary rounded>
-            Something!
-          </Button>
-        </div>
-      </div>
-    </>
-  );
+  
+  return <Accordion />;
 }
 
 export default App;
