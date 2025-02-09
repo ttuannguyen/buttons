@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Accordion = ({ items }) => {
   const [expandedIndex, setExpandedIndex] = useState(0);
@@ -6,14 +6,15 @@ const Accordion = ({ items }) => {
   const renderedItems = items.map((item, index) => {
     const isExpanded = index === expandedIndex;
 
-    if (index === expandedIndex) {
-      console.log("expanded");
-    } else {
-      console.log("collapsed");
-    }
+    // if (index === expandedIndex) {
+    //   console.log("expanded");
+    // } else {
+    //   console.log("collapsed");
+    // }
+    
     return (
       <div key={item.id}>
-        <div>{item.label}</div>
+        <div onClick={() => setExpandedIndex(index)}>{item.label}</div>
         {isExpanded && <div>{item.content}</div>}
       </div>
     );
