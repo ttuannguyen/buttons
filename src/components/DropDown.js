@@ -7,12 +7,15 @@ const DropDown = ({ options }) => {
     setIsOpen(!isOpen);
   };
 
-  const handleOptionClick = () => {
+  const handleOptionClick = (event) => {
+    // Close dropdown
     setIsOpen(false);
+    // Option the user clicks on
+    console.log(event);
   }
   
   const renderedOptions = options.map((option) => {
-    return <div onClick={handleOptionClick} key={option.value}>{option.label}</div>;
+    return <div onClick={() => handleOptionClick} key={option.value}>{option.label}</div>;
   });
 
   return (
