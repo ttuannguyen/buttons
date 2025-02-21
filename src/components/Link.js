@@ -1,9 +1,18 @@
-import React from 'react'
+import { useContext } from "react";
 
-const Link = () => {
-  return (
-    <div>Link</div>
-  )
-}
+import React from "react";
+import NavigationContext from "../context/navigation";
 
-export default Link
+const Link = ({ to, children }) => {
+  const { navigate } = useContext(NavigationContext);
+  
+  const handleClick = (event) => {
+    event.preventDefault();
+
+  };
+  return <a onClick={handleClick}>{children}</a>;
+  
+  
+};
+
+export default Link;
