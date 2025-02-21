@@ -9,6 +9,8 @@ const Link = ({ to, children }) => {
   const handleClick = (event) => {
     event.preventDefault();
 
+    navigate(to);
+
   };
   return <a onClick={handleClick}>{children}</a>;
   
