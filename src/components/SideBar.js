@@ -1,15 +1,21 @@
 import Link from "./Link";
 
 const Sidebar = () => {
-    const links = [
-        { label: 'Dropdown', path: '/' }
-    ];
+  const links = [
+    { label: "Dropdown", path: "/" },
+    { label: "Accordion", path: "/accordion" },
+    { label: "Buttons", path: "/buttons" },
+  ];
 
+  const renderedLinks = links.map((link) => {
     return (
-        <div>
+      <Link key={link.label} to={link.path}>
+        {link.label}
+      </Link>
+    );
+  });
 
-        </div>
-    )
-}
+  return <div></div>;
+};
 
 export default Sidebar;
