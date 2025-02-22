@@ -1,9 +1,22 @@
+import { useState } from "react";
+import Button from "../components/Button";
 import Modal from "../components/Modal";
 
 const ModalPage = () => {
-  return (
-    <div>ModalPage</div>
-  )
-}
+  const [showModal, setShowModal] = useState(false);
 
-export default ModalPage
+  const handleClick = () => {
+    setShowModal(true);
+  };
+
+  return (
+    <div>
+      <Button onClick={handleClick} primary>
+        Open Modal
+      </Button>
+      {showModal && <Modal />}
+    </div>
+  );
+};
+
+export default ModalPage;
